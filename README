@@ -15,6 +15,10 @@ git pull origin master
 # If there were updates install the new debian files. Mind to remove old kernels. It is not as comfortable as apt.
 sudo dpkg -i *.deb
 
+You can remove kernel & firmware as usual with dpkg or apt anytime.
+CAUTION: firmware-radeon-ucode*.deb might replace amdgpu firmware files of linux-firmware. So if you remove it you might lose some important blob firmwares. They can be recovered with:
+sudo apt-get install --reinstall linux-firmware
+
 Further PPAs for AMD GPUs:
 If you want to max out the performance of your GPU with the open source amdgpu driver you can use one of the following PPAs:
 https://launchpad.net/~oibaf/+archive/ubuntu/graphics-drivers
@@ -44,3 +48,12 @@ http://askubuntu.com/questions/216398/set-older-kernel-as-default-grub-entry
 Q: Why should I trust these hacked binaries/Where can I get the builds for another architecture/Can you build it with a special kernel config?
 A: Glad you ask. You can always check out the source code yourself (see top of the README), review/configure it and build it. You can find kernel build instructions all over the web (it's not as difficult as it sounds - it just needs a while).
 If you have an old gcc compiler: env KCFLAGS="-fno-pie" fixes "error: code model kernel does not support PIC mode"
+
+Q: On which linux OS and AMD hardware does this kernel run?
+A: So far I got no feedback reporting it wouldn't run - but I got little feedback at all. This was tested/reported to be working:
+Linux OS: Ubuntu 16.04, 16.10, 17.04; Linux Mint 18.1
+Hardware: R7 370, R9 380, RX 480
+
+Q: Any other cool stuff the DC/DAL kernel can do?
+A: Besides the obvious stuff (HDMI/DP audio and support for the newest graphics cards with the open source amdgpu) the DC/DAL kernel features fan speed & clock control, FreeSync, HDMI 2.0, atomic mode-setting, DP MST.
+
