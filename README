@@ -1,6 +1,6 @@
 The purpose of this git repository is to provide linux kernel image & header and firmware files as debian package binaries which include the most recent amdgpu developments. Among these, is the display abstraction layer (DAL) which is required for HDMI audio/sound. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel can also help to run the most recent AMD GPUs with the open source amdgpu driver.
 
-It should definitely work for Ubuntu 16.10. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
+It should definitely work for Ubuntu 16.04, 16.10, 17.04. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
 The corresponding source tree can be found here: https://github.com/M-Bab/linux-kernel-amdgpu
 
 Install the kernel & firmware:
@@ -30,10 +30,13 @@ LEGAL NOTICE: There is no warranty on these binaries. I am not responsible for a
 
 COPYRIGHT NOTICE: The according license information can be found in the individual debian packages. I did none of the code development - the attribution for all the work belongs to the awesome linux kernel and AMD developers and their efforts. I just mixed and built the code and made it available so others can spare the effort.
 
+Updates:
+17.05.17: Added amd-staging-4.11 based build. I will try to maintain builds of mbab-4.9 (longterm kernel!) and the latest available amd-staging kernel.
+
 Q & A & dragons:
 
 Q: What is this repository exactly and what's special about it?
-A: This repo includes builds of the recent amd-staging-4.9 kernel (https://cgit.freedesktop.org/~agd5f/linux/log/?h=amd-staging-4.9) forward-patched to the latest kernel security level (https://www.kernel.org/pub/linux/kernel/v4.x/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12 and will be updated with new blobs (e.g. Vega) when they become available.
+A: This repo includes builds of the amd-staging kernel (https://cgit.freedesktop.org/~agd5f/linux) forward-patched to the latest kernel security level (https://www.kernel.org/pub/linux/kernel/v4.x/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12 and will be updated with new blobs (e.g. Vega) when they become available.
 
 Q: Why don't include the kernel developers this code into the official kernel?
 A: That is a political/strategical thing between AMD and the kernel maintainers. AMD developers picked a certain design for a better driver maintenance between linux and windows and the kernel maintainers don't like it (on the base of previous experiences). More information here: https://www.phoronix.com/scan.php?page=news_item&px=AMDGPU-DC-DRM-No . I won't pick any sides in this discussion but the result for the normal user is to have no HDMI audio/no linux open source support for modern GPUs and this is annoying. So this repo is a workaround till it is actually resolved in the official kernels.
