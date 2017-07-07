@@ -9,10 +9,11 @@ git clone https://github.com/M-Bab/linux-kernel-amdgpu-binaries.git linux-kernel
 # Install the debian packages
 cd linux-kernel-amdgpu-binaries.git
 sudo dpkg -i *.deb
+# In the meantime there multiple kernels available - installing all requires quite some disk space. But you can also just install your favorite.
 
 Update the kernel & firmware:
 git pull origin master
-# If there were updates install the new debian files. Mind to remove old kernels. It is not as comfortable as apt.
+# If there were updates install the new debian files. Mind to purge old kernels. It is not as comfortable as apt!
 sudo dpkg -i *.deb
 
 You can remove kernel & firmware as usual with dpkg or apt anytime.
@@ -31,6 +32,7 @@ LEGAL NOTICE: There is no warranty on these binaries. I am not responsible for a
 COPYRIGHT NOTICE: The according license information can be found in the individual debian packages. I did none of the code development - the attribution for all the work belongs to the awesome linux kernel and AMD developers and their efforts. I just mixed and built the code and made it available so others can spare the effort.
 
 Updates:
+07.06.17: Added new fancy kernel: .UBUNTU uses the 4.11 kernel in the artful repo and merges the amd-staging stuff. Therefore all custom Ubuntu patches (UBUNTU: SAUCE) are included. This might be the best kernel for Ubuntu systems. The other two kernels remain on the codebase of the vanilla kernel + amd-staging.
 17.05.17: Added amd-staging-4.11 based build. I will try to maintain builds of mbab-4.9 (longterm kernel!) and the latest available amd-staging kernel.
 
 Q & A & dragons:
