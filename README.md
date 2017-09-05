@@ -61,6 +61,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `06.09.17`: Kernel 4.13 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.12.
 - `11.08.17`: Kernel 4.12 based on amd-staging-4.12 (vanilla and Ubuntu) replaces 4.11. I will not build amd-staging-drm-next for now, because the underlying kernel is not yet released (4.13).
 - `22.07.17`: Kernel 4.11 reached end-of-life. Updates from amd-staging-4.11 will still be merged if available. Or I replace 4.11 by a newer staging kernel when it becomes available.
 - `07.06.17`: Added new fancy kernel: .UBUNTU uses the 4.11 kernel in the artful repo and merges the amd-staging stuff. Therefore all custom Ubuntu patches (UBUNTU: SAUCE) are included. This might be the best kernel for Ubuntu systems. The other two kernels remain on the codebase of the vanilla kernel + amd-staging.
