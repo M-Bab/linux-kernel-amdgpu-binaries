@@ -61,6 +61,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `12.09.17`: Returned to 4.12 kernel after 4.13+amd-staging-drm-next had stability issues.
 - `06.09.17`: Kernel 4.13 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.12.
 - `11.08.17`: Kernel 4.12 based on amd-staging-4.12 (vanilla and Ubuntu) replaces 4.11. I will not build amd-staging-drm-next for now, because the underlying kernel is not yet released (4.13).
 - `22.07.17`: Kernel 4.11 reached end-of-life. Updates from amd-staging-4.11 will still be merged if available. Or I replace 4.11 by a newer staging kernel when it becomes available.
@@ -90,7 +91,7 @@ Q: I have an older AMD GPU (GCN 1.0 "Southern Islands" or GCN 1.1 "Sea Islands")
 **IMPORTANT**: You have to add "radeon.si_support=0 radeon.cik_support=0 amdgpu.si_support=1 amdgpu.cik_support=1" to your kernel boot parameters otherwise amdgpu will not work.
 
 Q: I have an extremely new AMD GPU (e.g. Vega or Raven Ridge) - what should I do?
-> A: You should definitely install a kernel with display code. This generation of GPUs will not only miss things like HDMI audio but the graphics output itself(!) without a display code enabled kernel. Therefore be sure to install such a kernel BEFORE you install the GPU to make life easier. Also ensure the firmware blobs are installed. The other option is to run the GPU via PRIME and putting that out to the display using a second GPU.
+> A: You should definitely install a kernel with display code. This generation of GPUs will not only miss things like HDMI audio but the graphics output itself(!) without a display code enabled kernel. Therefore be sure to install such a kernel BEFORE you install the GPU to make life easier. Also ensure the firmware blobs and one of the PPAs with the latest mesa drivers (llvm5 is needed) are installed. The other option is to run the GPU via PRIME and putting that out to the display using a second GPU.
 
 Q: I have this kernel installed but my system is still booting to a different kernel - why?
 > A: Ubuntu/grub usually simply starts the newest kernel available on the system. You can check the currently running kernel with "uname -a". So if you are using a newer kernel than supplied here you have to adjust the grub default entry:
