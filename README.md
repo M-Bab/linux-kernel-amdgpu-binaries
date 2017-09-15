@@ -10,12 +10,11 @@ The corresponding source tree can be found here: https://github.com/M-Bab/linux-
 
 ### Install the kernel & firmware
 
-```sh
-# Clone the repo
-git clone https://github.com/M-Bab/linux-kernel-amdgpu-binaries.git linux-kernel-amdgpu-binaries.git
+On Github click on the green "Clone or download" button and select "Download ZIP" to download the latest kernel(s) and firmware binaries.
+I do not recommend to clone the whole repo anymore because it has grown quite a bit.
 
-# Install the debian packages
-cd linux-kernel-amdgpu-binaries.git
+```sh
+# Extract the zip file and install the debian packages with
 sudo dpkg -i *.deb
 ```
 
@@ -23,10 +22,10 @@ In the meantime there multiple kernels available - installing all requires quite
 
 ### Update the kernel & firmware
 
-```sh
-git pull origin master
+If you want to be automatically notified you can subscribe to the issue "Update notifications". To receive the updates simply re-download the zip archive from "Clone or download".
 
-# If there were updates install the new debian files. Mind to purge old kernels. It is not as comfortable as apt!
+```sh
+# Install the new debian files with the following command. Mind to purge old kernels. It is not as comfortable as apt!
 sudo dpkg -i *.deb
 ```
 
