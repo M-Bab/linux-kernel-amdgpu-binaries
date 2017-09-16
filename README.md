@@ -13,7 +13,7 @@ The corresponding source tree can be found here: https://github.com/M-Bab/linux-
 On Github click on the green "Clone or download" button and select "Download ZIP" to download the latest kernel(s) and firmware binaries.
 I do not recommend to clone the whole repo anymore because it has grown quite a bit.
 
-Optionally you may download the files using shallow clone:
+Optionally you may download the files using a shallow clone:
 
 ```sh
 cd /tmp
