@@ -60,6 +60,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `21.09.17`: Kernel 4.12 reached end-of-life. Updates from amd-staging-4.12 will still be merged if available. I will (again) switch to 4.13 in the near future.
 - `12.09.17`: Returned to 4.12 kernel after 4.13+amd-staging-drm-next had stability issues.
 - `06.09.17`: Kernel 4.13 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.12.
 - `11.08.17`: Kernel 4.12 based on amd-staging-4.12 (vanilla and Ubuntu) replaces 4.11. I will not build amd-staging-drm-next for now, because the underlying kernel is not yet released (4.13).
