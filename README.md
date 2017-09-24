@@ -13,8 +13,17 @@ The corresponding source tree can be found here: https://github.com/M-Bab/linux-
 On Github click on the green "Clone or download" button and select "Download ZIP" to download the latest kernel(s) and firmware binaries.
 I do not recommend to clone the whole repo anymore because it has grown quite a bit.
 
+Optionally you may download the files using a shallow clone:
+
 ```sh
-# Extract the zip file and install the debian packages with
+cd /tmp
+git --git-dir=/dev/null clone --depth=1 https://github.com/M-Bab/linux-kernel-amdgpu-binaries
+cd linux-kernel-amdgpu-binaries
+```
+
+Install the packages after dowloading and/or extracting files:
+
+```sh
 sudo dpkg -i *.deb
 ```
 
