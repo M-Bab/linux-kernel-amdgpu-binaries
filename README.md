@@ -69,7 +69,8 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
-- `13.11.17`: Kernel 4.14 (LTS) based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.13 and 4.9 (LTS).
+- `11.12.17`: Kernel 4.15 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.14. This is the last kernel for this repo because the 4.15 kernel includes the dc code already.
+- `13.11.17`: Kernel 4.14 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.13 and 4.9 (LTS).
 - `06.10.17`: Kernel 4.13 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.12. (again ...)
 - `21.09.17`: Kernel 4.12 reached end-of-life. Updates from amd-staging-4.12 will still be merged if available. I will (again) switch to 4.13 in the near future.
 - `12.09.17`: Returned to 4.12 kernel after 4.13+amd-staging-drm-next had stability issues.
