@@ -2,7 +2,7 @@ The purpose of this git repository is to provide linux kernel image & header and
 
 Among these, is the new display code (previously called "DAL" or "DC") which is required for HDMI audio/sound and Vega generation display output. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel also helps to run the most recent AMD GPUs with the open source amdgpu driver.
 
-It should definitely work for Ubuntu 16.04, 16.10, 17.04. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
+It should definitely work for Ubuntu 16.04, 16.10, 17.04, 17.10. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
 
 The corresponding source tree can be found here: https://github.com/M-Bab/linux-kernel-amdgpu
 
@@ -28,6 +28,8 @@ sudo dpkg -i *.deb
 ```
 
 In the meantime there multiple kernels available - installing all requires quite some disk space. But you can also just install your favorite.
+
+**Since kernel 4.15 it might be necessary to add amdgpu.dc=1 to the boot parameters.**
 
 ### Update the kernel & firmware
 
@@ -94,6 +96,9 @@ Q: Why don't include the kernel developers this code into the official kernel?
 
 Q: Why is this on Github instead on a PPA?
 > A: Well I tried and failed multiple times to put it on a PPA (https://launchpad.net/~martin-babutzka/+archive/ubuntu/amdgpu-kernel/+packages). Kernels are usually not supplied via PPA and this has a reason: The PPAs build the packages from source (which is a good idea) but kernels are not really meant to be build with dpkg-buildpackage but rather with make or make-kpkg. So even with a lot of little fixes I couldn't get the source code building the debian way. However it builts decently with make-kpkg. Maybe I will at some time contact the Ubuntu staff for some support.
+
+Q: The upcoming kernel 4.15 already supports AMD DC - what is the advantage of this kernel then?
+> A: This kernel is build upon amd-staging-drm-next which is even more up-to-date then the 4.15 release candidates.
 
 Q: I am running this kernel - why do I still have no HDMI sound?
 > A: Check your sound control (e.g. pavucontrol) configuration. Here your HDMI sound output should be listed but there might be MULTIPLE outputs. Select the one WITHOUT the "unplugged" tag.
