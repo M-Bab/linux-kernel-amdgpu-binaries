@@ -1,8 +1,10 @@
 The purpose of this git repository is to provide linux kernel image & header and firmware files as debian package binaries which include the most recent amdgpu developments. 
 
-Among these, is the new display code (previously called "DAL" or "DC") which is required for HDMI audio/sound and Vega generation display output. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel also helps to run the most recent AMD GPUs with the open source amdgpu driver.
+Among these, is the new display code (previously called "DAL" or "DC") which is required for HDMI audio/sound and Vega/Raven generation display output. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel also helps to run the most recent AMD GPUs with the open source amdgpu driver.
 
 It should definitely work for Ubuntu 16.04, 16.10, 17.04, 17.10. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
+
+The "Ubuntu" variant adds some so called "sauce" contributions by Ubuntu to the kernel. That is a long list of patches (see here http://kernel.ubuntu.com/git/ubuntu/unstable.git/log/?qt=grep&q=sauce) that might help running your Ubuntu system better or more comfortable than the "vanilla" version without the Ubuntu patches.
 
 The corresponding source tree can be found here: https://github.com/M-Bab/linux-kernel-amdgpu
 
@@ -24,10 +26,10 @@ cd linux-kernel-amdgpu-binaries
 Install the packages after dowloading and/or extracting files:
 
 ```sh
-sudo dpkg -i *.deb
+sudo dpkg -i [linux-headers-name].deb [linux-image-name].deb firmware-radeon-ucode_*_all.deb
 ```
 
-In the meantime there multiple kernels available - installing all requires quite some disk space. But you can also just install your favorite.
+In the meantime there are multiple kernels available - installing all requires quite some disk space. **It is not possible to install the Ubuntu and non-Ubuntu variant at the same time if they have the same version.**
 
 **Since kernel 4.15 it might be necessary to add amdgpu.dc=1 to the boot parameters.**
 
@@ -37,7 +39,7 @@ If you want to be automatically notified you can subscribe to the issue "Update 
 
 ```sh
 # Install the new debian files with the following command. Mind to purge old kernels. It is not as comfortable as apt!
-sudo dpkg -i *.deb
+sudo dpkg -i [linux-headers-name].deb [linux-image-name].deb firmware-radeon-ucode_*_all.deb
 ```
 
 ### Uninstall/Remove the kernel & firmware
@@ -86,20 +88,13 @@ The according license information can be found in the individual debian packages
 ## Q & A & dragons
 
 Q: What is this repository exactly and what's special about it?
-> A: This repo includes builds of the amd-staging kernel (https://cgit.freedesktop.org/~agd5f/linux) forward-patched to the latest kernel security level (https://www.kernel.org/pub/linux/kernel/v4.x/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12, Vega and will be updated with new blobs when they become available.
+> A: This repo includes builds of the amd-staging kernel (https://cgit.freedesktop.org/~agd5f/linux) forward-patched to the latest kernel security level (https://www.kernel.org/pub/linux/kernel/v4.x/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12, Vega, Vega12, Vega20 and will be updated with new blobs when they become available.
 
 Q: Why should I trust these hacked binaries/Where can I get the builds for another architecture/Can you build it with a special kernel config?
 > A: Glad you ask. You can always check out the source code yourself (see top of the README), review/configure it and build it. You can find kernel build instructions all over the web (it's not as difficult as it sounds - it just needs a while).
-If you have an old gcc compiler: env KCFLAGS="-fno-pie" fixes "error: code model kernel does not support PIC mode"
 
 Q: Why don't include the kernel developers this code into the official kernel?
-> A: That is a political/strategical thing between AMD and the kernel maintainers. AMD developers picked a certain design for a better driver maintenance between linux and windows and the kernel maintainers don't like it (on the base of previous experiences). More information here: https://www.phoronix.com/scan.php?page=news_item&px=AMDGPU-DC-DRM-No . I won't pick any sides in this discussion but the result for the normal user is to have no HDMI audio/no linux open source support for modern GPUs and this is annoying. So this repo is a workaround till it is actually resolved in the official kernels.
-
-Q: Why is this on Github instead on a PPA?
-> A: Well I tried and failed multiple times to put it on a PPA (https://launchpad.net/~martin-babutzka/+archive/ubuntu/amdgpu-kernel/+packages). Kernels are usually not supplied via PPA and this has a reason: The PPAs build the packages from source (which is a good idea) but kernels are not really meant to be build with dpkg-buildpackage but rather with make or make-kpkg. So even with a lot of little fixes I couldn't get the source code building the debian way. However it builts decently with make-kpkg. Maybe I will at some time contact the Ubuntu staff for some support.
-
-Q: The upcoming kernel 4.15 already supports AMD DC - what is the advantage of this kernel then?
-> A: This kernel is build upon amd-staging-drm-next which is even more up-to-date then the 4.15 release candidates.
+> A: This finally happened with the 4.15 kernel. Still this amdgpu kernel contains significantly newer development if you want to try out bleeding edge stuff, have new AMD hardware, or want to experience the new performance and bugs of the development kernels.
 
 Q: I am running this kernel - why do I still have no HDMI sound?
 > A: Check your sound control (e.g. pavucontrol) configuration. Here your HDMI sound output should be listed but there might be MULTIPLE outputs. Select the one WITHOUT the "unplugged" tag.
@@ -117,8 +112,8 @@ http://askubuntu.com/questions/216398/set-older-kernel-as-default-grub-entry
 
 Q: On which linux OS and AMD hardware does this kernel run?
 > A: So far I got no feedback reporting it wouldn't run - but I got little feedback at all. This was tested/reported to be working:
-Linux OS: Ubuntu 16.04, 16.10, 17.04; Linux Mint 18.1
-Hardware: R7 370, R9 380, RX 480
+Linux OS: Ubuntu 16.04, 16.10, 17.04, 17.10; Linux Mint 18.1
+Hardware: R7 370, R9 380, RX 480, Vega, Raven Ridge
 
 Q: Any other cool stuff this kernel can do?
 > A: Besides the obvious stuff (HDMI/DP audio and support for the newest graphics cards with the open source amdgpu) the kernel features fan speed & clock control, FreeSync, HDMI 2.0, atomic mode-setting, DP MST.
