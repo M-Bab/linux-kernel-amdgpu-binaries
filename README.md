@@ -112,7 +112,7 @@ http://askubuntu.com/questions/216398/set-older-kernel-as-default-grub-entry
 
 Q: On which linux OS and AMD hardware does this kernel run?
 > A: So far I got no feedback reporting it wouldn't run - but I got little feedback at all. This was tested/reported to be working:
-Linux OS: Ubuntu 16.04, 16.10, 17.04, 17.10; Linux Mint 18.1
+Linux OS: Ubuntu 16.04, 16.10, 17.04, 17.10, 18.04; Linux Mint 18.1
 Hardware: R7 370, R9 380, RX 480, Vega, Raven Ridge
 
 Q: Any other cool stuff this kernel can do?
