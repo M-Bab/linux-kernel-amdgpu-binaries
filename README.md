@@ -73,6 +73,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `07.03.19`: Kernel 5.0 release based on amd-staging-drm-next (vanilla and Ubuntu).
 - `14.07.18`: Kernel 4.18 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.17.
 - `19.06.18`: Kernel 4.17 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.16.
 - `07.03.18`: Kernel 4.16 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.15.
