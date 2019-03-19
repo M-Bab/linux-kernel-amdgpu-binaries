@@ -1,0 +1,158 @@
+Format: 1.0
+Source: linux-5.0.2-19.03.18.amdgpu
+Binary: linux-image-5.0.2-19.03.18.amdgpu linux-headers-5.0.2-19.03.18.amdgpu linux-libc-dev linux-image-5.0.2-19.03.18.amdgpu-dbg
+Architecture: amd64 source
+Version: 5.0.2-19.03.18.amdgpu-2
+Checksums-Md5:
+ 40683c4864da0b80d3743554e45902a6 1359 linux-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2.dsc
+ fd6f3dfd217931b1634c6bcd4246fc54 11141196 linux-headers-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ be5bd482496ea28ac5031f52f62c706e 53873900 linux-image-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ 6f68d3bc380e276132e280cb12110c3c 1031416 linux-libc-dev_5.0.2-19.03.18.amdgpu-2_amd64.deb
+Checksums-Sha1:
+ 1675fbee55de4f38d094ed2db5f5ab22301d3a0f 1359 linux-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2.dsc
+ 03ebb354993a186777803f4377fa8f4d0a94815b 11141196 linux-headers-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ ce28f06b2d99936007cad72fb29f4a80d1677f82 53873900 linux-image-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ 8eceb1546fc91c9697bbca44f083a55d96b6d79a 1031416 linux-libc-dev_5.0.2-19.03.18.amdgpu-2_amd64.deb
+Checksums-Sha256:
+ 7f0b5a40c9eda7fbd09b8dc93fde4a7e7b9017e25bf9240eb0615797edaa86be 1359 linux-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2.dsc
+ 9c3a1a34029d5db9c083f5fb7dec59fb3f0c9e39e3832b390fcec02da625f254 11141196 linux-headers-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ 3d454700e848e119663e25ea22db5590d0f6e904a7f62bea7e7d743ce882d8dc 53873900 linux-image-5.0.2-19.03.18.amdgpu_5.0.2-19.03.18.amdgpu-2_amd64.deb
+ 34836b9487f0967ca07bdd26187fe3eb77e6b7bf2c6aeaf94c022c04b4c5f6f1 1031416 linux-libc-dev_5.0.2-19.03.18.amdgpu-2_amd64.deb
+Build-Origin: Ubuntu
+Build-Architecture: amd64
+Build-Date: Mon, 18 Mar 2019 23:19:57 +0100
+Installed-Build-Depends:
+ base-files (= 10.1ubuntu7),
+ base-passwd (= 3.5.45),
+ bash (= 4.4.18-2ubuntu3),
+ bc (= 1.07.1-2),
+ binutils (= 2.31.1-6ubuntu1),
+ binutils-common (= 2.31.1-6ubuntu1),
+ binutils-x86-64-linux-gnu (= 2.31.1-6ubuntu1),
+ bsdutils (= 1:2.32-0.1ubuntu2),
+ build-essential (= 12.5ubuntu2),
+ bzip2 (= 1.0.6-9),
+ coreutils (= 8.28-1ubuntu2),
+ cpio (= 2.12+dfsg-6),
+ cpp (= 4:8.2.0-1ubuntu1),
+ cpp-8 (= 8.2.0-7ubuntu1),
+ dash (= 0.5.8-2.10),
+ debconf (= 1.5.69),
+ debianutils (= 4.8.6),
+ diffutils (= 1:3.6-1),
+ dpkg (= 1.19.0.5ubuntu5),
+ dpkg-dev (= 1.19.0.5ubuntu5),
+ fdisk (= 2.32-0.1ubuntu2),
+ findutils (= 4.6.0+git+20180808-2),
+ g++ (= 4:8.2.0-1ubuntu1),
+ g++-8 (= 8.2.0-7ubuntu1),
+ gawk (= 1:4.1.4+dfsg-1build1),
+ gcc (= 4:8.2.0-1ubuntu1),
+ gcc-8 (= 8.2.0-7ubuntu1),
+ gcc-8-base (= 8.2.0-7ubuntu1),
+ grep (= 3.1-2ubuntu1),
+ gzip (= 1.6-5ubuntu2),
+ hostname (= 3.20),
+ init-system-helpers (= 1.54),
+ install-info (= 6.5.0.dfsg.1-4),
+ kmod (= 25-1ubuntu1.2),
+ libacl1 (= 2.2.52-3build1),
+ libasan5 (= 8.2.0-7ubuntu1),
+ libatomic1 (= 8.2.0-7ubuntu1),
+ libattr1 (= 1:2.4.47-2build1),
+ libaudit-common (= 1:2.8.3-1ubuntu2),
+ libaudit1 (= 1:2.8.3-1ubuntu2),
+ libbinutils (= 2.31.1-6ubuntu1),
+ libblkid1 (= 2.32-0.1ubuntu2),
+ libbz2-1.0 (= 1.0.6-9),
+ libc-bin (= 2.28-0ubuntu1),
+ libc-dev-bin (= 2.28-0ubuntu1),
+ libc6 (= 2.28-0ubuntu1),
+ libc6-dev (= 2.28-0ubuntu1),
+ libcap-ng0 (= 0.7.9-1),
+ libcc1-0 (= 8.2.0-7ubuntu1),
+ libdb5.3 (= 5.3.28+dfsg1-0.1),
+ libdebconfclient0 (= 0.244ubuntu1),
+ libdpkg-perl (= 1.19.0.5ubuntu5),
+ libfdisk1 (= 2.32-0.1ubuntu2),
+ libgcc-8-dev (= 8.2.0-7ubuntu1),
+ libgcc1 (= 1:8.2.0-7ubuntu1),
+ libgcrypt20 (= 1.8.3-1ubuntu1),
+ libgdbm-compat4 (= 1.14.1-6),
+ libgdbm5 (= 1.14.1-6),
+ libgmp10 (= 2:6.1.2+dfsg-3),
+ libgomp1 (= 8.2.0-7ubuntu1),
+ libgpg-error0 (= 1.32-1),
+ libisl19 (= 0.20-2),
+ libitm1 (= 8.2.0-7ubuntu1),
+ libkmod2 (= 25-1ubuntu1.2),
+ liblsan0 (= 8.2.0-7ubuntu1),
+ liblz4-1 (= 1.8.2-1ubuntu1),
+ liblzma5 (= 5.2.2-1.3),
+ libmount1 (= 2.32-0.1ubuntu2),
+ libmpc3 (= 1.1.0-1),
+ libmpfr6 (= 4.0.1-1),
+ libmpx2 (= 8.2.0-7ubuntu1),
+ libncursesw6 (= 6.1+20180210-4ubuntu1),
+ libpam-modules (= 1.1.8-3.6ubuntu3),
+ libpam-modules-bin (= 1.1.8-3.6ubuntu3),
+ libpam-runtime (= 1.1.8-3.6ubuntu3),
+ libpam0g (= 1.1.8-3.6ubuntu3),
+ libpcre3 (= 2:8.39-11),
+ libperl5.26 (= 5.26.2-7ubuntu0.1),
+ libquadmath0 (= 8.2.0-7ubuntu1),
+ libreadline7 (= 7.0-5),
+ libselinux1 (= 2.8-1build1),
+ libsigsegv2 (= 2.12-2),
+ libsmartcols1 (= 2.32-0.1ubuntu2),
+ libstdc++-8-dev (= 8.2.0-7ubuntu1),
+ libstdc++6 (= 8.2.0-7ubuntu1),
+ libsystemd0 (= 239-7ubuntu10.10),
+ libtinfo6 (= 6.1+20180210-4ubuntu1),
+ libtsan0 (= 8.2.0-7ubuntu1),
+ libubsan1 (= 8.2.0-7ubuntu1),
+ libudev1 (= 239-7ubuntu10.10),
+ libuuid1 (= 2.32-0.1ubuntu2),
+ libzstd1 (= 1.3.5+dfsg-1ubuntu1),
+ linux-libc-dev (= 4.20.0-rc6-18.12.13.amdgpu.ubuntu-3),
+ login (= 1:4.5-1ubuntu1),
+ lsb-base (= 9.20170808ubuntu1),
+ make (= 4.2.1-1.2),
+ mawk (= 1.3.3-17ubuntu3),
+ ncurses-base (= 6.1+20180210-4ubuntu1),
+ ncurses-bin (= 6.1+20180210-4ubuntu1),
+ patch (= 2.7.6-3),
+ perl (= 5.26.2-7ubuntu0.1),
+ perl-base (= 5.26.2-7ubuntu0.1),
+ perl-modules-5.26 (= 5.26.2-7ubuntu0.1),
+ readline-common (= 7.0-5),
+ sed (= 4.5-1),
+ sysvinit-utils (= 2.88dsf-59.10ubuntu2),
+ tar (= 1.30+dfsg-2),
+ util-linux (= 2.32-0.1ubuntu2),
+ xz-utils (= 5.2.2-1.3),
+ zlib1g (= 1:1.2.11.dfsg-0ubuntu2)
+Environment:
+ AR="ar"
+ AS="as"
+ AWK="awk"
+ CC="gcc"
+ CPP="gcc -E"
+ DEB_BUILD_OPTIONS="parallel=8"
+ LANG="en_US.UTF-8"
+ LC_ADDRESS="de_DE.UTF-8"
+ LC_COLLATE="C"
+ LC_IDENTIFICATION="de_DE.UTF-8"
+ LC_MEASUREMENT="de_DE.UTF-8"
+ LC_MONETARY="de_DE.UTF-8"
+ LC_NAME="de_DE.UTF-8"
+ LC_NUMERIC="C"
+ LC_PAPER="de_DE.UTF-8"
+ LC_TELEPHONE="de_DE.UTF-8"
+ LC_TIME="de_DE.UTF-8"
+ LD="ld"
+ LEX="flex"
+ MAKE="make"
+ MAKEFLAGS="rR -j8 --jobserver-auth=3,4 --no-print-directory -- obj=scripts/package LOCALVERSION=-19.03.18.amdgpu"
+ SOURCE_DATE_EPOCH="1552946245"
+ YACC="bison"
