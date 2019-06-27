@@ -2,7 +2,7 @@ The purpose of this git repository is to provide linux kernel image & header and
 
 Among these, is the new display code (previously called "DAL" or "DC") which is required for HDMI audio/sound and Vega/Raven generation display output. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel also helps to run the most recent AMD GPUs with the open source amdgpu driver.
 
-It should definitely work for Ubuntu 16.04, 16.10, 17.04, 17.10. It is likely to work on more Ubuntu (+derivatives) versions as long as you have a 64 bit CPU.
+It should work on Ubuntu/Debian (+derivatives) versions as long as you have a 64 bit CPU.
 
 The "Ubuntu" variant adds some so called "sauce" contributions by Ubuntu to the kernel. That is a long list of patches (see here http://kernel.ubuntu.com/git/ubuntu/unstable.git/log/?qt=grep&q=sauce) that might help running your Ubuntu system better or more comfortable than the "vanilla" version without the Ubuntu patches.
 
@@ -73,6 +73,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `27.06.19`: Kernel 5.2-rc based on amd-staging-drm-next (vanilla and Ubuntu).
 - `07.03.19`: Kernel 5.0 release based on amd-staging-drm-next (vanilla and Ubuntu).
 - `14.07.18`: Kernel 4.18 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.17.
 - `19.06.18`: Kernel 4.17 based on amd-staging-drm-next (vanilla and Ubuntu) replaces 4.16.
@@ -106,7 +107,7 @@ Q: I have an older AMD GPU (GCN 1.0 "Southern Islands" or GCN 1.1 "Sea Islands")
 > A: Yes it does, at least the feature is enabled - be aware it is experimental. Blacklisting the radeon module is not necessary since it is not build anymore since 14.07.17. On these GPUs the amdgpu driver can perform better or worse than the radeonsi driver, a detailled test is available here: http://www.phoronix.com/scan.php?page=article&item=linux-413-gcn101
 **IMPORTANT**: You have to add "radeon.si_support=0 radeon.cik_support=0 amdgpu.si_support=1 amdgpu.cik_support=1" to your kernel boot parameters otherwise amdgpu will not work.
 
-Q: I have an extremely new AMD GPU (e.g. Vega or Raven Ridge) - what should I do?
+Q: I have an extremely new AMD GPU (e.g. Vega, Raven Ridge or Navi) - what should I do?
 > A: You should definitely install a kernel with display code. This generation of GPUs will not only miss things like HDMI audio but the graphics output itself(!) without a display code enabled kernel. Therefore be sure to install such a kernel BEFORE you install the GPU to make life easier. Also ensure the firmware blobs and one of the PPAs with the latest mesa drivers (llvm5 is needed) are installed. The other option is to run the GPU via PRIME and putting that out to the display using a second GPU.
 
 Q: I have this kernel installed but my system is still booting to a different kernel - why?
