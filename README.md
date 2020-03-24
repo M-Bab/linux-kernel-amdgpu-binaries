@@ -73,6 +73,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `24.03.20`: Kernel 5.5 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `19.11.19`: Kernel 5.3 (finally) based on amd-staging-drm-next (vanilla and Ubuntu).
 - `27.06.19`: Kernel 5.2-rc based on amd-staging-drm-next (vanilla and Ubuntu).
 - `07.03.19`: Kernel 5.0 release based on amd-staging-drm-next (vanilla and Ubuntu).
