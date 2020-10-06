@@ -1,0 +1,170 @@
+Format: 1.0
+Source: linux-5.9.0-rc8-20.10.05.amdgpu
+Binary: linux-image-5.9.0-rc8-20.10.05.amdgpu linux-headers-5.9.0-rc8-20.10.05.amdgpu linux-libc-dev
+Architecture: amd64 source
+Version: 5.9.0-rc8-20.10.05.amdgpu-1
+Checksums-Md5:
+ 94bc29325975e389fa2cc4d0f96a407f 1377 linux-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1.dsc
+ 33caae34467e18ec54a8b387fe2f7b87 7882728 linux-headers-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ 1c6a398f27ee42b1cc83ec27fe61f6a1 62726796 linux-image-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ b1cf210543c4f9ea6ad12735d813b1e8 1119300 linux-libc-dev_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+Checksums-Sha1:
+ a2d9df788752eb465cde33e36535de5119bad835 1377 linux-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1.dsc
+ 3434d5205596b1f1cb1d141ff4c835874077a9a4 7882728 linux-headers-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ 6bb96eb796ab65f1fc9bf16656219a23b6f066fd 62726796 linux-image-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ d59382fd7a30118b93e97216bbb7c2b3500dab5a 1119300 linux-libc-dev_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+Checksums-Sha256:
+ 1e5ed7760cd0705cf35ae22bc2398e028630071ad4213543ed200e836e813915 1377 linux-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1.dsc
+ 6e6cfe900c6e651b7d3b9f17ab177e56056b965fd7b72f815aa2cce05af00a82 7882728 linux-headers-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ 71f59a6d055d458e522494b4e0b751e2473a45220d5bd8ef0ef478c21605358e 62726796 linux-image-5.9.0-rc8-20.10.05.amdgpu_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+ df8ac3784b16ced728b5dacab8501d90c0a0edc91102dc087b6fadadf0314885 1119300 linux-libc-dev_5.9.0-rc8-20.10.05.amdgpu-1_amd64.deb
+Build-Origin: Ubuntu
+Build-Architecture: amd64
+Build-Date: Mon, 05 Oct 2020 23:30:15 +0200
+Build-Tainted-By:
+ usr-local-has-configs
+ usr-local-has-libraries
+ usr-local-has-programs
+Installed-Build-Depends:
+ base-files (= 11ubuntu5.2),
+ base-passwd (= 3.5.47),
+ bash (= 5.0-6ubuntu1.1),
+ bc (= 1.07.1-2build1),
+ binutils (= 2.34-6ubuntu1),
+ binutils-common (= 2.34-6ubuntu1),
+ binutils-x86-64-linux-gnu (= 2.34-6ubuntu1),
+ bison (= 2:3.5.1+dfsg-1),
+ bsdutils (= 1:2.34-0.1ubuntu9.1),
+ build-essential (= 12.8ubuntu1),
+ bzip2 (= 1.0.8-2),
+ coreutils (= 8.30-3ubuntu2),
+ cpio (= 2.13+dfsg-2),
+ cpp (= 4:9.3.0-1ubuntu2),
+ cpp-9 (= 9.3.0-10ubuntu2),
+ dash (= 0.5.10.2-6),
+ debconf (= 1.5.73),
+ debianutils (= 4.9.1),
+ diffutils (= 1:3.7-3),
+ dpkg (= 1.19.7ubuntu3),
+ dpkg-dev (= 1.19.7ubuntu3),
+ findutils (= 4.7.0-1ubuntu1),
+ flex (= 2.6.4-6.2),
+ g++ (= 4:9.3.0-1ubuntu2),
+ g++-9 (= 9.3.0-10ubuntu2),
+ gawk (= 1:5.0.1+dfsg-1),
+ gcc (= 4:9.3.0-1ubuntu2),
+ gcc-10-base (= 10-20200411-0ubuntu1),
+ gcc-9 (= 9.3.0-10ubuntu2),
+ gcc-9-base (= 9.3.0-10ubuntu2),
+ grep (= 3.4-1),
+ gzip (= 1.10-0ubuntu4),
+ hostname (= 3.23),
+ init-system-helpers (= 1.57),
+ install-info (= 6.7.0.dfsg.2-5),
+ kmod (= 27-1ubuntu2),
+ libacl1 (= 2.2.53-6),
+ libasan5 (= 9.3.0-10ubuntu2),
+ libatomic1 (= 10-20200411-0ubuntu1),
+ libattr1 (= 1:2.4.48-5),
+ libaudit-common (= 1:2.8.5-2ubuntu6),
+ libaudit1 (= 1:2.8.5-2ubuntu6),
+ libbinutils (= 2.34-6ubuntu1),
+ libblkid1 (= 2.34-0.1ubuntu9.1),
+ libbz2-1.0 (= 1.0.8-2),
+ libc-bin (= 2.31-0ubuntu9.1),
+ libc-dev-bin (= 2.31-0ubuntu9.1),
+ libc6 (= 2.31-0ubuntu9.1),
+ libc6-dev (= 2.31-0ubuntu9.1),
+ libcap-ng0 (= 0.7.9-2.1build1),
+ libcc1-0 (= 10-20200411-0ubuntu1),
+ libcrypt-dev (= 1:4.4.10-10ubuntu4),
+ libcrypt1 (= 1:4.4.10-10ubuntu4),
+ libctf-nobfd0 (= 2.34-6ubuntu1),
+ libctf0 (= 2.34-6ubuntu1),
+ libdb5.3 (= 5.3.28+dfsg1-0.6ubuntu2),
+ libdebconfclient0 (= 0.251ubuntu1),
+ libdpkg-perl (= 1.19.7ubuntu3),
+ libgcc-9-dev (= 9.3.0-10ubuntu2),
+ libgcc-s1 (= 10-20200411-0ubuntu1),
+ libgcrypt20 (= 1.8.5-5ubuntu1),
+ libgdbm-compat4 (= 1.18.1-5),
+ libgdbm6 (= 1.18.1-5),
+ libgmp10 (= 2:6.2.0+dfsg-4),
+ libgomp1 (= 10-20200411-0ubuntu1),
+ libgpg-error0 (= 1.37-1),
+ libisl22 (= 0.22.1-1),
+ libitm1 (= 10-20200411-0ubuntu1),
+ libkmod2 (= 27-1ubuntu2),
+ liblsan0 (= 10-20200411-0ubuntu1),
+ liblz4-1 (= 1.9.2-2),
+ liblzma5 (= 5.2.4-1ubuntu1),
+ libmount1 (= 2.34-0.1ubuntu9.1),
+ libmpc3 (= 1.1.0-1),
+ libmpfr6 (= 4.0.2-1),
+ libpam-modules (= 1.3.1-5ubuntu4.1),
+ libpam-modules-bin (= 1.3.1-5ubuntu4.1),
+ libpam-runtime (= 1.3.1-5ubuntu4.1),
+ libpam0g (= 1.3.1-5ubuntu4.1),
+ libpcre2-8-0 (= 10.34-7),
+ libpcre3 (= 2:8.39-12build1),
+ libperl5.30 (= 5.30.0-9build1),
+ libpopt0 (= 1.16-14),
+ libquadmath0 (= 10-20200411-0ubuntu1),
+ libreadline8 (= 8.0-4),
+ libselinux1 (= 3.0-1build2),
+ libsigsegv2 (= 2.12-2),
+ libsmartcols1 (= 2.34-0.1ubuntu9.1),
+ libssl-dev (= 1.1.1f-1ubuntu2),
+ libssl1.1 (= 1.1.1f-1ubuntu2),
+ libstdc++-9-dev (= 9.3.0-10ubuntu2),
+ libstdc++6 (= 10-20200411-0ubuntu1),
+ libsystemd0 (= 245.4-4ubuntu3.2),
+ libtinfo6 (= 6.2-0ubuntu2),
+ libtsan0 (= 10-20200411-0ubuntu1),
+ libubsan1 (= 10-20200411-0ubuntu1),
+ libudev1 (= 245.4-4ubuntu3.2),
+ libuuid1 (= 2.34-0.1ubuntu9.1),
+ libzstd1 (= 1.4.4+dfsg-3),
+ linux-libc-dev (= 5.4.0-48.52),
+ login (= 1:4.8.1-1ubuntu5.20.04),
+ lsb-base (= 11.1.0ubuntu2),
+ m4 (= 1.4.18-4),
+ make (= 4.2.1-1.2),
+ mawk (= 1.3.4.20200120-2),
+ ncurses-base (= 6.2-0ubuntu2),
+ ncurses-bin (= 6.2-0ubuntu2),
+ patch (= 2.7.6-6),
+ perl (= 5.30.0-9build1),
+ perl-base (= 5.30.0-9build1),
+ perl-modules-5.30 (= 5.30.0-9build1),
+ readline-common (= 8.0-4),
+ rsync (= 3.1.3-8),
+ sed (= 4.7-1),
+ sysvinit-utils (= 2.96-2.1ubuntu1),
+ tar (= 1.30+dfsg-7),
+ util-linux (= 2.34-0.1ubuntu9.1),
+ xz-utils (= 5.2.4-1ubuntu1),
+ zlib1g (= 1:1.2.11.dfsg-2ubuntu1)
+Environment:
+ AR="ar"
+ AWK="awk"
+ CC="gcc"
+ CPP="gcc -E"
+ DEB_BUILD_OPTIONS="parallel=8"
+ LANG="en_US.UTF-8"
+ LC_ADDRESS="de_DE.UTF-8"
+ LC_COLLATE="C"
+ LC_IDENTIFICATION="de_DE.UTF-8"
+ LC_MEASUREMENT="de_DE.UTF-8"
+ LC_MONETARY="de_DE.UTF-8"
+ LC_NAME="de_DE.UTF-8"
+ LC_NUMERIC="C"
+ LC_PAPER="de_DE.UTF-8"
+ LC_TELEPHONE="de_DE.UTF-8"
+ LC_TIME="de_DE.UTF-8"
+ LD="ld"
+ LEX="flex"
+ MAKE="make"
+ MAKEFLAGS="rR -j8 --jobserver-auth=3,4 --no-print-directory -- LOCALVERSION=-20.10.05.amdgpu"
+ SOURCE_DATE_EPOCH="1601931810"
+ YACC="bison"
