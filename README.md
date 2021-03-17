@@ -73,6 +73,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `17.03.21`: Kernel 5.11 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `20.09.20`: Kernel 5.9 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `24.03.20`: Kernel 5.5 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `19.11.19`: Kernel 5.3 (finally) based on amd-staging-drm-next (vanilla and Ubuntu).
@@ -95,7 +96,7 @@ The according license information can be found in the individual debian packages
 ## Q & A & dragons
 
 Q: What is this repository exactly and what's special about it?
-> A: This repo includes builds of the amd-staging kernel (https://cgit.freedesktop.org/~agd5f/linux) forward-patched to the latest kernel security level (https://www.kernel.org/pub/linux/kernel/v4.x/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12, Vega, Vega12, Vega20 and will be updated with new blobs when they become available.
+> A: This repo includes builds of the amd-staging kernel (new: https://gitlab.freedesktop.org/agd5f/linux/-/tree/amd-staging-drm-next) forward-patched to the latest kernel security level (https://www.kernel.org/). The kernel is configured as commonly in Ubuntu (include all reasonable code, put everything into modules), enables AMD's display abstraction layer, kernel debugging is disabled. The kernel is build for amd64 architecture. I also quickly constructed a debian package which includes all the binary firmwares (from https://people.freedesktop.org/~agd5f/radeon_ucode/ and https://git.kernel.org/pub/scm/linux/kernel/git/firmware/linux-firmware.git) which are too new to be included in the standard linux-firmware package from Ubuntu. This package is absolutely essential to get the 3D acceleration working properly so be sure to install it as well (or grep the right firmware from the homepage by yourself and place it in /lib/firmware/amdgpu). Currently includes tonga, topaz, polaris10, polaris11, polaris12, Vega, Vega12, Vega20 and will be updated with new blobs when they become available.
 
 Q: Why should I trust these hacked binaries/Where can I get the builds for another architecture/Can you build it with a special kernel config?
 > A: Glad you ask. You can always check out the source code yourself (see top of the README), review/configure it and build it. You can find kernel build instructions all over the web (it's not as difficult as it sounds - it just needs a while).
