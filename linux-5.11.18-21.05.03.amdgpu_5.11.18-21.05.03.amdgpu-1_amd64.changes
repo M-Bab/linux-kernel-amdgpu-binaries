@@ -1,0 +1,42 @@
+Format: 1.8
+Date: Mon, 03 May 2021 23:09:26 +0200
+Source: linux-5.11.18-21.05.03.amdgpu
+Binary: linux-headers-5.11.18-21.05.03.amdgpu linux-image-5.11.18-21.05.03.amdgpu linux-libc-dev
+Architecture: source amd64
+Version: 5.11.18-21.05.03.amdgpu-1
+Distribution: groovy
+Urgency: low
+Maintainer: Martin Babutzka <martin.babutzka@online.de>
+Changed-By: Martin Babutzka <martin.babutzka@online.de>
+Description:
+ linux-headers-5.11.18-21.05.03.amdgpu - Linux kernel headers for 5.11.18-21.05.03.amdgpu on amd64
+ linux-image-5.11.18-21.05.03.amdgpu - Linux kernel, version 5.11.18-21.05.03.amdgpu
+ linux-libc-dev - Linux support headers for userspace development
+Changes:
+ linux-5.11.18-21.05.03.amdgpu (5.11.18-21.05.03.amdgpu-1) groovy; urgency=low
+ .
+   * Custom built Linux kernel.
+Checksums-Sha1:
+ 631cda438e6272358994de4c47c97babbd8554dd 1341 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.dsc
+ 2277881ecd6253cbba3074090072893b697e3dcb 195326322 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu.orig.tar.gz
+ 76cac0975cdd59137444e77f401490ded4f0f5d3 201139 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.diff.gz
+ 6c30121e53193c4df8a9e5bfe46b66fae6bdbe95 6453 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.buildinfo
+ e76b04a468b61b0568b80179a4c9081c39d1e760 8015656 linux-headers-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 2d46f82df193df8c14eb8179f472de6997903b39 64648092 linux-image-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 8e714ca38b9cb3a43753cbd2a762fb61c75a6164 1153956 linux-libc-dev_5.11.18-21.05.03.amdgpu-1_amd64.deb
+Checksums-Sha256:
+ 9e7d439dbeae03becad94fd19e7a9e8e079b4224ab567fa19ebe347d221a5c48 1341 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.dsc
+ 406464029507053bf8866b54ff9586feb59add42aaac96be9d9ddb7d299c3ff2 195326322 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu.orig.tar.gz
+ 95f7b04b3a62ea2a1d369a03e8e2fd5f69c45a7f9d6cd11698ddcd2d45d13f3f 201139 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.diff.gz
+ 3095de762b78397605da5627190b0f6ac0fea7a633951d31f1b49c763e18638a 6453 linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.buildinfo
+ fd991338b9145bce5d608b9ad18d25e1b599563c9c8d3d1470b4da00399a7209 8015656 linux-headers-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 9638027158976f93fbd7e82c4abebe1d5cd9ba7af64b03b3fbdaef78bee08410 64648092 linux-image-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 7b8ce6dab8a0cadf0ea072b62fcc8a08c6a4051355adf8cbb00dec207f30ce0b 1153956 linux-libc-dev_5.11.18-21.05.03.amdgpu-1_amd64.deb
+Files:
+ a5495b7aa48b2ed8a9b3bbd007df1e35 1341 kernel optional linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.dsc
+ 7461dfaf9f771cf238e445e2b0fe341c 195326322 kernel optional linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu.orig.tar.gz
+ a917d3f74159baa7a30b12195c53d2fd 201139 kernel optional linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1.diff.gz
+ ef79053d0e9e0b338b56902a30094a1a 6453 kernel optional linux-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.buildinfo
+ 686a9690b31a8eb7c0778f4f3949fefa 8015656 kernel optional linux-headers-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 4534accb6692e33a67c6f8ffa002de66 64648092 kernel optional linux-image-5.11.18-21.05.03.amdgpu_5.11.18-21.05.03.amdgpu-1_amd64.deb
+ 824c0b55650af7ccf60840a42dcd564c 1153956 devel optional linux-libc-dev_5.11.18-21.05.03.amdgpu-1_amd64.deb
