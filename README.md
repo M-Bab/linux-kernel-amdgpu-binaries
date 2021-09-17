@@ -73,6 +73,7 @@ The according license information can be found in the individual debian packages
 
 ## Updates
 
+- `17.09.21`: Kernel 5.13 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `17.03.21`: Kernel 5.11 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `20.09.20`: Kernel 5.9 based on amd-staging-drm-next (vanilla and Ubuntu).
 - `24.03.20`: Kernel 5.5 based on amd-staging-drm-next (vanilla and Ubuntu).
