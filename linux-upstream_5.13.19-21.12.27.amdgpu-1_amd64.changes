@@ -1,0 +1,43 @@
+Format: 1.8
+Date: Mon, 27 Dec 2021 15:26:09 +0100
+Source: linux-upstream
+Binary: linux-headers-5.13.19-21.12.27.amdgpu linux-image-5.13.19-21.12.27.amdgpu linux-libc-dev
+Built-For-Profiles: noudeb
+Architecture: source amd64
+Version: 5.13.19-21.12.27.amdgpu-1
+Distribution: impish
+Urgency: low
+Maintainer: Martin Babutzka <martin.babutzka@online.de>
+Changed-By: Martin Babutzka <martin.babutzka@online.de>
+Description:
+ linux-headers-5.13.19-21.12.27.amdgpu - Linux kernel headers for 5.13.19-21.12.27.amdgpu on amd64
+ linux-image-5.13.19-21.12.27.amdgpu - Linux kernel, version 5.13.19-21.12.27.amdgpu
+ linux-libc-dev - Linux support headers for userspace development
+Changes:
+ linux-upstream (5.13.19-21.12.27.amdgpu-1) impish; urgency=low
+ .
+   * Custom built Linux kernel.
+Checksums-Sha1:
+ 67c18d4f1b8ee9e946ed25a8cec4c54c06795cfe 1236 linux-upstream_5.13.19-21.12.27.amdgpu-1.dsc
+ 3718892c02358886462156df1a0156ae77fdcdc4 200259973 linux-upstream_5.13.19-21.12.27.amdgpu.orig.tar.gz
+ 8e8aa108c908ac9e3272f455b2f64af021fab8b6 204277 linux-upstream_5.13.19-21.12.27.amdgpu-1.diff.gz
+ aa3b4e49f53244d4d3227ac1e3ee85f59750cad8 8586274 linux-headers-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ c4e072fe6658ed46e9b8c42d8187081ca96828a2 71448378 linux-image-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ b3d35f3335aad31f184ea0d6d2ac3799af0e9568 1219322 linux-libc-dev_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ cccc309f84020ea9c4ee377da8eb4975d111bff4 6509 linux-upstream_5.13.19-21.12.27.amdgpu-1_amd64.buildinfo
+Checksums-Sha256:
+ 254646304c0bbf24abf06a27a67fc1a087de29f5b883f61fa78d9aa8ee3b61a3 1236 linux-upstream_5.13.19-21.12.27.amdgpu-1.dsc
+ 12060660c0be85529330253482a29a4163f3bb9058dd548bbbe8acb0e155770e 200259973 linux-upstream_5.13.19-21.12.27.amdgpu.orig.tar.gz
+ 706d5c674c6086bae9ed57118e56bb465d9489686ff3534016c15f48205c257d 204277 linux-upstream_5.13.19-21.12.27.amdgpu-1.diff.gz
+ 15848b71c01ecde43bd40ecee86f281edbc0aa5da3b6699ea12cb14f3f8e594b 8586274 linux-headers-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ bf452e12db64994c96cb3be1cdf261e32e2326b360836f5332302e8b77fce0fb 71448378 linux-image-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ f098e293fc67ceba62a987428a4211c2f7c86901dc4a79f4a096a4b465a1241b 1219322 linux-libc-dev_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ 0773845660df9c5a910f6b31455fd59746a1237a536cdddf5a33a57ad6cbcf86 6509 linux-upstream_5.13.19-21.12.27.amdgpu-1_amd64.buildinfo
+Files:
+ ed362fcd30329b8658e6c21e64eca567 1236 kernel optional linux-upstream_5.13.19-21.12.27.amdgpu-1.dsc
+ 62e7808b94d25ac238850fc993487e11 200259973 kernel optional linux-upstream_5.13.19-21.12.27.amdgpu.orig.tar.gz
+ dec6f2808cfe9c9b3979cc20524e02cc 204277 kernel optional linux-upstream_5.13.19-21.12.27.amdgpu-1.diff.gz
+ 9d126dff6da65ea4eaf53e17e2407b30 8586274 kernel optional linux-headers-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ bedf26303cacb35027f409f9227bf563 71448378 kernel optional linux-image-5.13.19-21.12.27.amdgpu_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ 2031bee60ed987a6840d645dc59c926f 1219322 devel optional linux-libc-dev_5.13.19-21.12.27.amdgpu-1_amd64.deb
+ 1ea8cbf2f3bed3c3841cf93ccc5b831c 6509 kernel optional linux-upstream_5.13.19-21.12.27.amdgpu-1_amd64.buildinfo
