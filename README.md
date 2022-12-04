@@ -1,3 +1,13 @@
+## Update
+
+My latest tries to build a mixed up kernel from the AMD code (and official linux kernel code and Ubuntu sauce) did not work well. There are massive merge conflicts and build errors which I dont have the time to figure out. But the reason for that is also kind of good news: The development in the official kernels is almost on-par with the latest AMD kernel developments.
+
+I started this kernel because back in the days users didn't even have HDMI sound via AMD graphics card without such a special kernel. Things have improved a lot till then. The amdgpu dc code is merged for several years now and the software development there is so fast you usually get release day support for their new GPUs.
+
+In short: This kernel is not really necessary anymore. I am not using it anymore either. I will shut these two repos down. Thanks to all users!
+
+## Intro
+
 The purpose of this git repository is to provide linux kernel image & header and firmware files as debian package binaries which include the most recent amdgpu developments. 
 
 Among these, is the new display code (previously called "DAL" or "DC") which is required for HDMI audio/sound and Vega/Raven generation display output. So if you have a new AMD graphics card and your HDMI sound is not working you can try to install and boot this kernel and see if it helps. This kernel also helps to run the most recent AMD GPUs with the open source amdgpu driver.
